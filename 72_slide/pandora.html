@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>캐로셀 - bxslider</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.css">
+    <style>
+        body {
+            margin: 0;
+        }
+        #section{
+            height: 100vh;
+        }
+        .slideWrap {
+            /* 이미지 하나가 346px */
+            width: 1044px;
+            margin: 0 auto;
+            border: 1px solid red;
+        }
+        .bx-wrapper {
+            border: none;
+            background: transparent;
+            box-shadow: none;
+            height: 100%;
+            margin-bottom: 32px;
+            overflow: hidden;
+        }
+
+        .bx-wrapper .bx-pager {
+            bottom: 0px;
+        }
+
+        .bx-wrapper .bx-pager.bx-default-pager a.active,
+        .bx-wrapper .bx-pager.bx-default-pager a:focus,
+        .bx-wrapper .bx-pager.bx-default-pager a:hover {
+            background: red;
+        }
+
+        .bx-wrapper .bx-pager.bx-default-pager a {
+            background: #666;
+            text-indent: -9999px;
+            display: block;
+            width: 5px;
+            height: 5px;
+            margin: 0 5px;
+            outline: 0;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px px;
+            border-radius: 5px;
+        }
+
+        .bx-wrapper .bx-prev {
+            border: 1px solid;
+            left: 10px;
+            background: url(imges/arr_left.svg) 0 -32px no-repeat;
+        }
+        
+        .bx-wrapper .bx-next {
+            border: 1px solid;
+            right: 10px;
+            background: url(arr_right.svg) -43px -32px no-repeat;
+        }
+    </style>
+</head>
+<!-- 
+    jquery
+    bxslider
+    slick
+
+    1. 라이브러리: *.js, *.css
+    2. HTML 코드
+    3. JS 코드는 라이브러리(*.js) 아래 붙인다.
+
+-->
+<!--
+    제이퀘리 CDM 자바스크립트 라이브러리언어이다.
+    document.getElementById('myid');
+    document.getElementbyClassName('myClass');
+    $('myId')
+    $('myClass')
+-->
+
+<body>
+    <div class="section">
+        <div class="slideWrap">
+            <div class="slider">
+                <!-- alt는 웹 접근성 -->
+                <div><img src="imges/762676C01.png" alt="이미지1"></div>
+                <P>투톤 셀레셜 트리플 댕글 참</P>
+                <p>&#8361;138.000</p>
+                <a href="#">제품보기</a>
+                <div><img src="imges/791691C02.png" alt="이미지2"></div>
+                <div><img src="imges/792680C01.png" alt="이미지3"></div>
+                <div><img src="imges/792681C01.png" alt="이미지4"></div>
+                <div><img src="imges/792687C01.png" alt="이미지5"></div>
+                <div><img src="imges/792694C01.png" alt="이미지6"></div>
+                <div><img src="imges/792695C01.png" alt="이미지7"></div>
+                <div><img src="imges/792698C01.png" alt="이미지8"></div>
+                <div><img src="imges/792703C01.png" alt="이미지9"></div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- bx슬라이더 CDM -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js"></script>
+    <script>
+        // {}: 객체(object)
+        // 객체.메서드()
+        // 자바스크립트 데이터: 숫자, 문자열, 불, 객체{}, ...
+        /* 
+            객체의 정의
+            {
+                속성:값,
+                속성:값,
+                속성:값,
+                ...
+            }
+        */
+        // 요소.메서드(매개변수,...)
+        // $('선택자').bxSlider({})
+        /* 
+            미디어(<img>, <video>)의 크기
+            object-fit: cover, contain,...
+            object-position: x위치, y위치;
+
+            배경이미지
+            background-size: cover, contain;
+            background-position: cover, contain;
+        */
+        $('.slider').bxSlider({
+            auto: true,
+            // autoControls: true,
+            stopAutoOnClick: true,
+            pager: true,
+            slideWidth: 348,
+            minSlides: 3,
+            maxSlides: 3,
+            moveSlides: 3,
+        
+        });
+    </script>
+</body>
+
+</html>

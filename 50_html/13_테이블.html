@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+    <link rel="stylesheet" href="css/13_테이블.css">
+</head>
+
+<body>
+    <h1>표</h1>
+    <!-- 교재 19페이지에 있는 기본 표를 만들어 보세요. -->
+    <!--  입력 순서가 있음.
+        필수
+        <table>: 표
+        <tr>: row(행)
+        <th rowspan="숫자" colspan="숫자">: 셀의 제목
+        <td rowspan="숫자" colspan="숫자">: 셀의 내용
+            rowspan="행병함"
+            colspan="열병합"
+        
+        선택
+        <caption>: 표의 제목
+        <colgroup>: 열 그룹
+        <col>: column(열)
+        <thead>: 셀 제목 그룹
+        <tbody>: 셀 내용 그룹
+        <tfoot>: 그룹
+
+        <table>
+            <caption>
+            <colgroup>
+                <col></col>
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>: 제목</th>
+                </tr>
+                <tr>
+                    <td>: 내용</td>
+                </tr>
+            </thead>
+            <thead>
+                <tr>
+                    <td>: 내용</td>
+                </tr>
+            </thead>
+            <thead>
+                <tr>
+                    <td>: 내용</td>
+                </tr>
+            </thead>
+        </table>
+            -->
+
+    <h2>기본</h2>
+    <table>
+        <!-- <caption>태그는 반드시 table 바로 밑에 쓴다. -->
+        <caption>표의제목</caption>
+        <colgroup>
+            <col>
+            <!-- col 3개 병함 -->
+            <col span="3">
+        </colgroup>
+        <thead>
+            <tr>
+                <!-- scope=col은 열 범위 -->
+                <th scope="col">번호</th>
+                <th scope="col">과목</th>
+                <th scope="col">이름</th>
+                <th scope="col">점수</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>html</td>
+                <td>홍길동</td>
+                <td>90</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>CSS</td>
+                <td>유길동</td>
+                <td>95</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">평균</td>
+                <td>92.5</td>
+            </tr>
+        </tfoot>
+    </table>
+    <hr>
+    <table>
+        <!-- <caption>태그는 반드시 table 바로 밑에 쓴다. -->
+        <caption>표의제목</caption>
+            <tr>
+                <!-- scope=col은 행 범위 -->
+                <th scope="row">번호</th>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+        <tr>
+            <th scope="row">과목</th>
+            <td>html</td>
+            <td>CSS</td>
+            <td>JS</td>
+        </tr>
+    </table>
+
+    <h2>행 병합</h2>
+    <table>
+        <tr>
+            <!-- 1행과 2행 2개를 병함 -->
+            <td rowspan="2">1</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>4</td>
+        </tr>
+    </table>
+
+    <h2>열 병합</h2>
+    <table>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <!-- 1열과 2열 2개를 병함 -->
+            <td colspan="2">3</td>
+        </tr>
+    </table>
+</body>
+
+</html>

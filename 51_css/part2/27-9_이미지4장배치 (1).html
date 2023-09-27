@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지 4장 배치</title>
+    <style>
+        /* reset.css */
+        body,ul {margin:0;}
+        ul {
+            padding:0;
+            list-style: none;
+        }
+        img {
+            width: 100%;
+        }
+
+        /* common */
+        li {
+            /* width: 360px; */
+            /* height: 240px; */
+        }
+
+        /* Tablet */
+        @media (min-width:576px) {
+            ul {
+                display: flex;
+                width: 1500px;
+                margin: 0 auto;
+                justify-content: space-between;
+            }
+        }
+
+        /* Desktop */
+        @media (min-width:992px) {}
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li><img src="../assets/images/italy1.jpg" alt="이탈리아"></li>
+        <li><img src="../assets/images/italy2.jpg" alt="이탈리아"></li>
+        <li><img src="../assets/images/italy3.jpg" alt="이탈리아"></li>
+        <li><img src="../assets/images/italy4.jpg" alt="이탈리아"></li>
+    </ul>
+</body>
+
+</html>

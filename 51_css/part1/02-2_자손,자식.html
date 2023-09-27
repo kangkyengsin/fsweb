@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HTML+CSS</title>
+        <style>
+            /* 
+                복합 선택자 : 선택자를 2개 사용
+                1. 후손(하위, 자손) 선택자 : 공백
+                2. 자식 선택자 : >
+                3. 형제 선택자 : +, ~
+
+                선택자1(조상) 선택자2(자손)
+                선택자1(부모)>선택자2(자식)
+                선택자1(형)+선택자2(제, 인접한형제) 
+                선택자1(형)~선택자2(제)
+
+                선택자 사이는 공백으로 구분한다.
+                선택자1은 조상(부모포함)
+                선택자2는 자손(자식포함)
+            */
+
+
+            /* 
+                자식선택자
+                선택자1 > 선택자2
+                선택자 사이는 >으로 구분한다.
+                선택자1은 부모
+                선택자2는 자식
+            */
+            /* 조상 자손 O*/
+            .s1 p {color:red}
+            /* 부모 자식 O*/
+            .s2 p {color:red}
+            /*  조상>자손 x */
+            .s2>p {color:green}
+            /*  부모>자식 O */
+            .s2>p {color:blue}
+            .s1>p {color:orange}
+            
+        </style>
+    </head>
+
+    <body>
+        <h1>후손/자식선택자</h1>
+        <div class="s1">
+            <div class="s2">
+                <p>나는 div.s2의 자식이다.</p>
+                <ul>
+                    <li>나는 div.s2의 손자이다.</li>
+                </ul>
+            </div>
+            <ul>
+                <li>나는 div.s2의 손자가 아니다.</li>
+            </ul>
+            <p>나는 div.s2의 자식이 아니고 div.s1의 자식이다.</p>
+        </div>
+    </body>
+
+</html>

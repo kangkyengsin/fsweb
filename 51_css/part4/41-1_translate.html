@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        /* 
+            함수(function - 기능)
+            backgroun-image: url();
+            left: calc(200*200)=400;
+
+            text-transform: 대소문자 변환;
+                1.이동
+                2. 크기 조절
+                3. 회전
+                4. 기울림
+            transform(변환): 값;
+                translatex(x): x이동
+                translatey(y): y이동
+                translatez(z): 확대, 축소
+                translatet3d(x,y,z): 이동
+                perspective: 1000px; -> 원근감 -> 변형 요소
+                translatet(x,y): 이동
+                
+            단위없음. 기본값(1)
+                scaleX(x): 가로
+                scaleY(y): 세로
+                scaleZ(z): 깊이
+                scale3d(x,y,z)
+                scale(x,[y]) -> y를 생략하면 x에 비례하여 y값이 적용된다.
+                    
+            단위: deg(각도)
+                rotateX(x) -> 3D
+                rotateY(y) -> 3D
+                rotateZ(z) -> 2D
+                rotate3d(x,y,z)
+                rotate(x,y)
+
+                단위: deg(각도)
+                skewX(x): 기울림
+                skewY(y): 기울림
+                skew(x,y): 기울림
+            2D 변환: x축, y축
+
+            3D 변환: x축, y축, z축
+            perspective: 1000px; -> 원근감, 부모 요소에 지정
+                값: px (%는 사용할 수 없다.)
+            perspective: origin: x축, y축; -> 변형의 기준
+                    transform: origin: x축, y축; -> 변형의 기준
+                        값: px, %, 키워드
+                        x축: left, right, center
+                        y축: top, bottom, center
+            
+            transform-style
+            backface-visibility
+
+            display:none;
+            opacity:0
+            visibility:hideen
+        */
+        .wrap {
+            /* 
+                float:left -> 자식(.outer)
+                display: flex; -> .outer의 부모(.wrap)
+            */
+            display: flex;
+        }
+        .outer {
+            margin: 20px;
+            border:1px solid black;
+            perspective: 1000px;
+        }
+        /* .trf는 <span>태그 이다. */
+        .trf {
+            display:inline-block;
+            width:100px;
+            height:100px;
+            background: red;
+            transition: .5s;
+        }
+        /* .outer에 마우스를 올리면 자식 .trftx를 오른쪽으로 100px 이동 */
+        .outer:hover .trftx {
+            /* transform: translateX(x); */
+            transform: translateX(100px);
+        }
+        .outer:hover .trfty {
+            /* transform: translateY(y); */
+            transform: translateY(100px);
+        }
+        .trftz {
+            transform: perspective(1000px) translateZ(0px);
+        }
+        .outer:hover .trftz {
+            /* 
+                원근감(perspective)과 함께 사용해야 한다. 
+                perspective: 값; -> 속성
+                transform: perspective(); -> 값
+                transform: 값1 값2 값3 ...;
+
+                1) 부모에 perspective를 지정함.
+                    transform: translateZ(z)
+                2) 부모에 perspective 지정하지않음
+                    transform: perspective(값) translateZ(값)
+            */
+            /* transform: translateZ(z); */
+            transform: perspective(1000px) translateZ(100px);
+        }
+        .trftd {
+            transform: perspective(1000px) translate3d(0px,0px,0px);
+        }
+        .outer:hover .trftd {
+            /*
+                이동
+                2D
+                    transform: translate(x,y);  -> y를 생략하면 x에 비례하여 y값이 적용안된다.
+                    transform: translateX(x);
+                    transform: translateY(y);
+                3D
+                    transform: translateZ(z);
+                    transform: translate3d(x,y,z);
+                    
+            */
+
+            transform: perspective(1000px) translate3d(100px,100px,100px);
+        }
+        .outer:hover .trft {
+            /* transform: translate(x[, y]); */
+            transform: translate(100px, 100px);
+            /* transform: translate(100px); */
+        }
+    </style>
+</head>
+<body>
+    <h1>변환</h1>
+    <h2>이동</h2>
+    <div class="wrap">
+        <div class="outer">
+            <span class="trf trftx">translateX</span>transform
+        </div>
+        <div class="outer">
+            <span class="trf trfty">translateY</span>transform
+        </div>
+        <div class="outer">
+            <span class="trf trftz">translateZ</span>transform
+        </div>
+        <div class="outer">
+            <span class="trf trftd">translate3d</span>transform
+        </div>
+        <div class="outer">
+            <span class="trf trft">translate</span>transform
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,204 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap');
+
+/* 작업중 */
+/* body * {
+    outline: 1px solid lime;
+} */
+
+/* 초기화 */
+/* 요소의 패딩과 테두리를 요소의 안쪽으로 지정 */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    width: 100%;
+    vertical-align: top;
+}
+/* typo - 글꼴, 크기, 색, 줄간격, 자간, 스타일(굵기, 기울임, 밑줄) */
+html {font-size: 10px;}
+body {
+    font: 1.5rem/1.6 'Noto Sans KR', sans-serif;
+}
+a {
+    text-decoration: none;
+    color: #333
+}
+.main a {
+    font-size: 1.8rem;
+    color: #333;
+}
+.sub a {
+    font-size: 1.4rem;
+    color: #777;
+}
+.copy {
+    line-height: 50px;
+    color: #777;
+}
+.copy p:last-of-type {
+    font-size: 1.2rem;
+}
+.sns {
+    line-height: 100px;
+}
+/* common */
+
+#wrap {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/* header */
+header {
+    height: 100px;
+    padding: 30px 0;
+}
+
+/* logo */
+.logo {
+    float: left;
+}
+
+/* navigation(gnb) */
+#gnb {
+    float: right;
+    margin-top: 10px;
+}
+
+/* 1depth */
+#gnb .main li {
+    display: inline-block;
+    width: 150px;
+}
+
+/* 2depth */
+#gnb .sub {
+    display: none;
+}
+
+/* slide */
+#slide {
+    height: 300px;
+}
+
+#slide li {
+    position: absolute;
+}
+
+/* modal */
+#modal {
+    display: none;
+}
+
+/* contents */
+#contents {
+    height: 200px;
+    padding: 5px 0;
+}
+
+#contents>div {
+    float: left;
+    width: 380px;
+}
+
+/* tabs*/
+#contents #tabs {
+    width: 424px;
+}
+
+#tabs input {
+    display: none;
+}
+
+#tabs input:checked+div {
+    display: block;
+}
+
+#tabs div {
+    display: none;
+    position: absolute;
+    width: 424px;
+    height: 150px;
+}
+
+label {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #E6E6E4;
+}
+
+/* 공지사항 */
+#tab1 li {
+    border-bottom: 1px solid #ccc;
+}
+
+#tab1 span {
+    display: inline-block;
+    width: 334px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding-right: 16px;
+}
+
+#tabs #tab2 {
+    /* box-sizing: border-box; */
+    /* width: calc(400px-32px); */
+    /* background-color: lightcoral; */
+    padding: 20px 16px;
+}
+
+#tab2 a {
+    display: inline-block;
+    margin: 0 4px;
+}
+
+/* banner */
+.banner {
+    margin-left: 8px;
+}
+
+/* shortcut */
+#contents .shortcut {
+    float: right;
+}
+
+/* footer */
+footer {
+    position: relative;
+    height: 100px;
+    background: linear-gradient(#3e3e3e 50%, #1b1b1b 50%);
+    color: #fff;
+    padding: 0 30px;
+}
+
+footer a {
+    /* a 태그는 글자색을 별도 지정한다. */
+    color: #fff;
+}
+
+/* 주소 및 저작권 */
+.copy {
+    float:left;
+    background: url('../images/logobottom.svg') no-repeat 200px 50%/71px;
+    padding-left: 300px;
+}
+
+/* SNS */
+.sns {
+    float:right;
+    width: 300px;
+    overflow:hidden;
+}
+.sns li {
+    float: left;
+    margin: 0 16px;
+}

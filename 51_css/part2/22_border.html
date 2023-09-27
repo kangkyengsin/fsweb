@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        div {
+            width: 200px;
+            height: 150px;
+            margin: 20px;
+        }
+        /* 
+            border:[두께] 스타일 [색];
+            색을 생략하면 글자색
+            글자색을 지정하지 않으면 검정
+            border-top-color
+            border-top-style
+            border-top-width
+            
+            border-top
+            border-right
+            border-bottom
+            border-left
+            outline은 상하좌우 개별 속성은 없다.
+            
+            border-color : 선의 색
+            border-style : 선의 종류
+            border-width : 선 굵기
+            
+            outline-color : 선의 색
+            outline-style : 선의 종류
+            outline-width : 선 굵기
+            outline-offset : 선 사이 간격
+
+            (속기형)
+            border(선) : [두께] 스타일 [색];
+            outline(외각선) : [두께] 스타일 [색];
+            속성 값의 순서는 없다
+            색을 생략하면 글자색
+            글자색을 지정하면 
+
+
+        */
+        /* 구성 콘테츠->패딩->보더->마진->아웃라인 */
+        /* (1) .b1에 위쪽 테두리를 1px solid red로 지정하시오. */
+        .b1 {border-top: 1px solid red;}
+
+        /* (2) .b2에 오른쪽 테두리를 1px solid red로 지정하시오. */
+        .b2 {border-right: 1px solid red;}
+       
+        /* 
+        .b2 {border-right-width: 1px;}
+        .b2 {border-right-style: solid;}
+        .b2 {border-right-color: red;}
+         */
+
+        /* (3) .b3에 아래쪽 테두리를 1px solid red로 지정하시오. */
+        .b3 {border-bottom: 1px solid red;}
+        
+        /* (4) .b4에 왼쪽 테두리를 1px solid red로 지정하시오. */
+        .b4 {border-left: 1px solid red;}
+        
+
+        /* (5) .b5에 테두리를 1px solid red로 지정하시오. */
+        .b5 {
+            border: 1px solid red;
+            border-bottom: none;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <h1>테두리</h1>
+    <div class="b1"></div>
+    <div class="b2"></div>
+    <div class="b3"></div>
+    <div class="b4"></div>
+    <div class="b5"></div>
+</body>
+</html>

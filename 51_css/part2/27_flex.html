@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        /* 
+            레이아웃 구현
+            1. float -> flex, grid
+            2. flex
+            3. grid
+            
+            플렉스(flex, flexible) 박스(유연한 박스)
+            주축과 교차축
+                flex-direction:row; 이면 주축 row, 교차축 column
+                flex-direction:column; 이면 주축 column, 교차축 row
+
+            부모: 플렉스 컨테이너
+                display:flex;
+                    1. flex-direction: 방향;
+                        값: row(행->가로),
+                            column(열->세로)
+                            row-reverse(행->가로-역),
+                            column-reverse(열->세로-역)
+                        예시: horizontal(수평->가로), verrical(수직->세로)
+                    2. flex-wrap: 줄바꿈;
+                    값: nowarp: 줄바꿈 안함,
+                        wrap: 줄바꿈 함,
+                        wrap-reverse: 역으로 줄바꿈 함.
+                    3. 1.2번 속기형: flex-flow: direction wrap
+                    4. justify-content: 주축 정렬
+                        값: flex-start, start: 시작
+                            flex-end, end: 끝
+                            center: 가운데
+                            space-berween: 시작과 끝에 배치 후 남은 공간을 균등 분배
+                            space-around: 아이템의 주변 공간을 균등 분배
+                            space-evenly: 아이템을 제외한 나머지 공간을 균등 분배
+                    5. align-items: 교차축 정렬
+                        값: normal(stratch|flex-start)
+                            stretch: 아이템의 크기를 지정안했을 경우 기본값
+                            flex-start: 아이템의 크기를 지정했을 경우 기본값
+                            flex-end
+                            center
+                            baseline..
+                    6. align-content: 교차축 블록 방향 정렬 (2개의 라인)
+
+            자식: 플렉스 아이템
+                7. align-self: 교차축 정렬, align-items 보다 우선 적용된다.
+                8. flex-grow: 커진다.
+                9. flex-shrink: 작아진다.
+                10. flex-basis: 처음 크기
+                11. 8,9,10번 속기형 -> flex: grow shrink basis
+                12. order: 순서, 숫자가 작을수록 앞에 배치
+        */
+
+
+        /* 부모 요소인 .container의 display를 flex로 적용해 보세요. */
+        /* 
+            border-box를 감사는게 outline이다.
+            outline-offset 보더와 아웃라인 간격을 값을 입력할 수 있다.
+         */
+        .container {
+            outline: 1px solid red;
+            display: flex;
+        }
+
+        .container div {
+            width: 100px;
+            height: 100px;
+            background-color: gray;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>flexible(플렉서블)</h1>
+    <!-- 
+        div.container는 부모 요소로
+        부모 요소에 display:flex;를 지정하면 
+        이 부모 요소를 플렉스 컨테이너라고 부른다.
+        그리고, 자식 요소는 플렉스 아이템이라고 부른다.
+    -->
+    <div class="container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+</body>
+
+</html>

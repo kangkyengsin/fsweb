@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+JS</title>
+</head>
+<script>
+    /* window.addEventListener('DOMContentLoaded', function(){
+        코드;
+    });
+    $(document).ready(function{
+        코드;
+    });
+    $(function(){
+        코드;
+    }); */
+</script>
+
+<body>
+    <h1>함수</h1>
+    <p>여기를 출력되게하자!</p>
+</body>
+
+<script>
+    var txt = document.querySelector('p');
+    console.log(txt);
+    //선언적 함수 출력 선언 후 호출
+    txt.addEventListener('click', fn);
+
+    // 익명 함수
+    var fn = function () {
+        txt.innerHTML = `4<br>`;
+        txt.innerHTML += `5<br>`;
+        txt.innerHTML += `6<br>`;
+    }
+    // 선언적 함수
+    function fn() {
+        txt.innerHTML = `1<br>`;
+        txt.innerHTML += `2<br>`;
+        txt.innerHTML += `3<br>`;
+    }
+    // 익명 함수 선언 전/후 호출가능!
+    txt.addEventListener('click', fn);
+</script>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+JS</title>
+    <style>
+        img {
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>객체</h1>
+    <div></div>
+    <script>
+        /*
+            객체?
+            현실세계:
+                사람            object(객체)
+                특징            property(속성)
+                동작            method(메서드)
+         */
+
+        const box = document.querySelector('div')
+
+        // 객체선언
+        const person = {
+            'first name': '길동',
+            lastname: '홍',
+            age: 20,
+            gendar: '남',
+            name : function(){
+                return person.lastname + person['first name'];
+            }
+        };
+
+        person.name();
+
+        // 객체의 값을 가져오기
+        // 속성의 이름에 공백이 있을경우
+        // []문자열로 표기
+        person['first name']; + '<br>'
+        
+        // 방법1: 객체. 속성
+        // person.gendar;
+        
+        // 방법2: 객체['속성']
+        // person['age']; + '<br>'
+        
+        // 객체의 값 수정하기
+        person.lastName = '김'; + '<br>'
+        
+        // 객체의 메서드를 실행
+        // 객체.메서드()
+        // person.name(); + '<br>'
+
+        // 출력
+        box.innerText = `
+            나의 이름은 ${person.name} 입니다.
+            나이는 ${person['age']}세 이고요
+            성별은 ${person.gendar} 입니다.
+        `
+
+    </script>
+</body>
+
+</html>

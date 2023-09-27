@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        /* 
+            텍스트 그림자: 
+            text-shadow: 가로위치 세로위치 [흐림] [색], 가로위치 세로위치 [흐림] [색], ...;
+            색의 기본값: 글자색 
+        */
+        /* 
+            CSS: 디자인
+            형식:
+            선택자 {
+                속성:값;
+                속성:값;
+                속성:값;
+                속기 속성: 값 값 값 값;
+            }
+        */
+        /* 
+            박스 그림자:
+            box-shadow: 가로위치 세로위치 [흐림] [퍼짐] [색] [inset], 가로위치 세로위치 [흐림] [퍼짐] [색] [inset], ... 
+        */
+
+        div {
+            width: 300px;
+            height: 50px;
+            margin: 20px;
+            border: 1px solid;
+        }
+
+        /* 그림자의 색을 지정하지 않으면 글자색이다. */
+
+        /* (1) .b1의 박스 그림자를 가로 위치 5px, 세로 위치 10px로 지정하시오. */
+        .b1 {
+            box-shadow: 5px 10px;
+        }
+
+        /* (2) .b2의 박스 그림자를 가로 위치 5px, 세로 위치 10px, 색상을 #888로 지정하시오. */
+        .b2 {
+            box-shadow: 5px 10px #888;
+        }
+
+        /* (3) .b3의 박스 그림자를 가로 위치 5px, 세로 위치 10px, 흐림 정도를 8px, 색상을 #888로 지정하시오. */
+        .b3 {
+            box-shadow: 5px 10px 8px #888;
+        }
+
+        /* (4) .b4의 박스 그림자를 가로 위치 5px, 세로 위치 10px, 흐림 정도를 8px, 퍼짐 정도를 10px, 색상을 #888로 지정하시오. */
+        /*  
+            box-shadow : {xPos(hoff), yPos(voff), blur}입력순서 고정 color
+            horizontal : 수평 -> 가로(좌우)
+            vertical : 수직 -> 세로(위아래)
+        */
+        /* 
+        box-shadow : {xPos(hoff,가로), yPos(voff,세로), blur(흐림), spread(퍼짐)}입력순서 고정 color
+        */
+        .b4 {
+            box-shadow: 5px 10px 8px 10px #888;
+        }
+
+        /* (5) .b5의 박스 그림자를 가로 위치 5px, 세로 위치 5px, 색상은 blue, 가로 위치는 10px, 세로 위치는 10px, 색상은 red로, 가로 위치는 15px, 세로 위치는 15px, 색상은 green으로 둘 이상의 그림자를 추가하시오. */
+        .b5 {
+            box-shadow: 5px 5px blue, 10px 10px red, 15px 15px green;
+        }
+
+        /* (6) .b6의 박스 그림자를 가로 위치는 5px, 세로 위치는 5px, 흐림 정도를 5px, 색상은 #aaa, 내부 그림자로 지정하시오. */
+        .b6 {
+            box-shadow: 5px 5px 5px #aaa inset;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>박스 그림자</h1>
+    <div class="b1">box-shadow</div>
+    <div class="b2">box-shadow</div>
+    <div class="b3">box-shadow</div>
+    <div class="b4">box-shadow</div>
+    <div class="b5">box-shadow</div>
+    <div class="b6">box-shadow</div>
+</body>
+</html>

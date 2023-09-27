@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+</head>
+
+<body>
+    <h1>폼</h1>
+    <!-- 
+        <form> : 폼 요소 그룹핑(전체영역)
+        <fieldset> : 그룹핑(일부영역)
+            <legerd> : 필드셋으로 그룹핑한 콘텡츠의 제목
+        <labal> : 텍스트 선택시 체크박스 및 라디오 체크함.
+        <input> : 입력(한 줄 텍스트 입력) 창,  버튼, ...
+            input은 - 빈태그
+        <button> : 버튼
+        <textarea(텍스트에리얼)> : 여러 줄 텍스트 입력,
+        <select> : 목록, BD연동 가능(ul은 DB연동x)
+            <option>
+            <optgroup>
+        <datalist> : 콤보(콤보박스) = 목록 + 입력, 상위 명령어(input밑에datalist)씀
+            ex)<input>
+                    <datalist>
+     -->
+    <!-- 
+        <input type="값">
+        값 : text, password, hidden
+            submit, reset, button, image, file
+            search, email, tel, url
+     -->
+
+    <p>폼(양식)? 검색 창, 로그인 창, 회원가입, 게시판</p>
+    <!-- 서버 프로그래밍언어: php, jsp, asp -->
+    <!-- 자동 완성 기능:  autocomplete="on" -->
+    <form action="action_page.php" method="get">
+        <h2>검색</h2>
+        <fieldset>
+            <legend>검색 창</legend>
+            <!-- 검색 입력 상자 -->
+            <input type="search" name="search">            
+            <!-- 검색 버튼 -->
+            <input type="submit" value="검색">
+
+        </fieldset>
+        <h2>로그인</h2>
+            <form action="login">
+            <!-- 아이디 -->
+            <label for="user_id">아이디:</label>
+            <input type="text" id="user_id" name="user_id" placeholder="아이디">
+            <!-- 패스워드 -->
+            <label for="user_password">패스워드</label>
+            <input type="password" id="user_password" name="user_password" placeholder="패스워드">
+            
+            <!-- 로그인 버튼 -->
+            <!-- value는 버튼의 이름 -->
+            <input type="submit" value="로그인">
+        </form>
+        <h2>회원가입</h2>
+        <form action="member.php" method="get">
+            <legend>회원 가입</legend>
+                
+                <!-- 이용 약관 -->
+                <div>
+                    <!-- 체크박스 -->
+                    <input type="checkbox" id="chk1" >
+                    <label for="chk1">ooo 이용약관 동의(필수)</label>
+                </div>
+            
+                <div>
+                <!-- 글상자 -->
+                <!-- column(열), row(행) -->
+                <textarea readonly>여러분을 환영합니다. ooo 서비스 및 제품(이하 ‘서비스’)을 이용해 주셔서 감사합니다. 본 약관은 -중략-</textarea>
+                </div>
+            
+                <div>
+                <!-- text 입력 상자 -->
+                <label for="birth">생년월일</label>
+                <!-- value는 초기 값이면서 서버로 전송될 데이터 -->
+                    <input type="text" name="birth_year" id="birth" value="년">
+                <!-- 목록 상자 -->
+                    <select name="list">
+                        <option value="">월</option>
+                        <optgroup label="겨울">
+                            <option value="dec">12</option>
+                            <option value="jan">1</option>
+                            <option value="feb">2</option>
+                        </optgroup>
+                        <optgroup label="봄">
+                            <option value="mar">3</option>
+                            <option value="apr">4</option>
+                            <option value="may">5</option>
+                        </optgroup>
+                        <optgroup label="여름">
+                            <option value="jun">6</option>
+                            <option value="jul">7</option>
+                            <option value="aug">8</option>
+                        </optgroup>
+                        <optgroup label="가을">
+                            <option value="sep">9</option>
+                            <option value="oct">10</option>
+                            <option value="nov">11</option>
+                        </optgroup>
+                    </select>
+                <!-- text 입력 상자 -->
+                    <input type="text" name="day" placeholder="일">
+                </div>
+            
+                <div>
+                <!-- 이메일 -->
+                본인 확인 이메일
+                <input type="text" name="user_id2" placeholder="이메일 id">@
+                <input type="text" name="user_domail" list="mail">
+                <datalist id="mail">
+                    <option value="naver.com">naver.com</option>
+                    <option value="gooogle.com">.gooogle.com</option>
+                    <option value="daum.net">.daum.net</option>
+                </datalist>
+
+                <!-- 이메일 -->
+                <br>
+                <input type="email" name="user_email">
+
+                </div>
+            
+                <div>
+                    <!-- 전화번호 -->
+                    <label for="user_tel">휴대전화</label>
+                    <!-- 과거 폼의 유효성검사는 JS로 했었다. -->
+                    <input type="tel" id="user_tel" name="user_tel">
+                </div>
+
+                <!-- 관심프로그램 -->
+                <!-- 체크박스는 여러 개의 항목 중 여러 개 선택 가능 -->
+                <input type="checkbox" id="language1" name="language1" value="HTML">
+                <label for="language1">html</label>
+                <input type="checkbox" id="language2" name="language2" value="CSS">
+                <label for="language2">CSS</label>
+                <input type="checkbox" id="language3" name="language3" value="js">
+                <label for="language3">javascript</label>
+                <!-- 라디오버튼은 여러 개의 항목 중 1개 선택 가능 -->
+                <!-- 라디오버튼은 name은 같은 이름을 쓴다. -->
+                <!-- 동의 여부 확인 -->
+                <label><input type="radio" name="agree" value="yes">동의함.</label>
+                <label><input type="radio" name="agree" value="no">동의하지않음.</label>
+                <br>
+                <!-- 전송 버튼 -->
+                <button type="submit">가입하기</button>
+
+        </form>
+    </form>
+</body>
+
+</html>

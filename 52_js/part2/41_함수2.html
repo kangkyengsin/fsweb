@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+JS</title>
+</head>
+
+<body>
+    <h1>함수</h1>
+    <p>함수1 출력</p>
+    <p>함수2 출력</p>
+    <p>함수3 출력</p>
+    <p>함수4 출력</p>
+    <p>함수5 출력</p>
+    <p>함수6 출력</p>
+    <p>함수6 리턴값</p>
+
+    <script>
+        /* 
+            1. 매개변수(매개값)
+                function fn(a, b) {
+                document.write(a, '<br>');
+            }
+                fn(10)
+            2. return - 값 되돌려 주거나, 함수 종료
+            3. 스코프(scope, 영역) -변수, 함수
+
+            문(statement)
+                1. 표현식(expression): 결과 값이 있는 문장;
+                2. 함수문, 제어문 - 결과 값이 없는 문장;
+
+            typescript: 자바스크립트 다 사용할줄 알면 개인공부할것.
+            함수 정의
+
+            선언적 함수: 이름 있는 함수, 호이스팅(Hoisting)
+            function 함수명([parameter],[매개함수], ...) {
+                코드;
+                return[표현식];
+            }
+
+            익명 함수
+            var 참조변수 = function () {
+                코드;
+            }
+
+            화살표 함수
+            var 참조변수 = () => {
+                코드;
+            }
+
+            함수 호출( fn() )
+            함수명();
+            참조변수();
+        */
+
+        // 1부터 5까지 화면에 출력
+        var pTag = document.querySelectorAll('p');
+
+        // pTag[0].style.color = 'red';
+        // pTag[0].style.fontWeight = 'bold';
+        // pTag[0].style.fontSize = '20px';
+
+        // pTag[0].innerHTML = '1<br>';
+        // pTag[0].innerHTML += '2<br>';
+        // pTag[0].innerHTML += '3<br>';
+        // pTag[0].innerHTML += '4<br>';
+        // pTag[0].innerHTML += '5<br>';
+
+        // pTag.item(1).innerHTML = '1<br>';
+        // pTag.item(1).innerHTML += '2<br>';
+        // pTag.item(1).innerHTML += '3<br>';
+        // pTag.item(1).innerHTML += '4<br>';
+        // pTag.item(1).innerHTML += '5<br>';
+
+        // pTag[2].innerHTML = '1<br>';
+        // pTag[2].innerHTML += '2<br>';
+        // pTag[2].innerHTML += '3<br>';
+        // pTag[2].innerHTML += '4<br>';
+        // pTag[2].innerHTML += '5<br>';
+
+        /* function fn() {
+            document.write(1, '<br>');
+            document.write(2, '<br>');
+            document.write(3, '<br>');
+            document.write(4, '<br>');
+            document.write(5, '<br>');
+        } */
+        /* var fn = function () {
+            document.write(1, '<br>');
+            document.write(2, '<br>');
+            document.write(3, '<br>');
+            document.write(4, '<br>');
+            document.write(5, '<br>');
+        } */
+
+        /* 
+            화살표 함수 (function 대신 =>으로 사용한다.)
+            var fn = () => {
+            document.write(1, '<br>');
+            document.write(2, '<br>');
+            document.write(3, '<br>');
+            document.write(4, '<br>');
+            document.write(5, '<br>');
+        } */
+
+        /* 
+            제어문(if와 for는 반드시 알아야 한다.)
+            1. 조건문: if
+            2. 선택문: switch
+            3. 반복문: for
+            for (초기식; 조건식; 증감식){
+                코드;
+            }
+
+            읽는 순서:
+            1. 초기식
+            2. 조건식
+            3. 코드
+            4. 증감식
+            5. 조건식
+            6. 코드
+            7. 증감식,...
+            조건식이 false이면 for문을 빠져나온다.
+        */
+
+            /* 
+                document: 내장객체
+                alert() 내장함수
+                document.getElementById('아이디')
+                document.getElementsByClassName('클래스')
+                document.getElementsByTagName('태그')
+
+                document.querySelector('#아이디')
+                document.querySelectorAll('.아이디')
+            */
+
+            // HTML의 내용: innerHTML, innerText 속성
+            // HTML의 속성
+            // 요소.title = '말풍선';
+            // CSS의 속성
+            // 요소.style.color = 'red';
+
+            
+            // 요소 선택
+            const pTags = document.querySelectorAll('p');
+
+            // HTML 내용 변경
+            // pTags[0].innerHTML = '2000';
+
+            // 사용자 정의 함수
+            // 익명함수
+            const fn1 = function (para1, para2, para3){
+                // .innrHTML 경우 줄바꿈 할려면 <br> 사용
+                // .innerText 경우 줄바꿈 할려면 <br> 사용 안해도 됨.
+                // HTML속성 변경
+                pTags[0].innerHTML = `fn1의 결과 :<br>
+                    para1+para2 = ${para1+para2}<br>
+                    para2+para3 = ${para2+para3}`;
+                // CSS속성 변경
+                pTags[0].style.color = 'darkblue';
+            }
+            // 익명 함수만 화살표 함수로 변경 가능
+            var fn2 = (para1, para2, para3) => {
+                // HTML속성 변경
+                pTags[1].innerHTML = `fn2의 결과 :<br>
+                    para1+para2 = ${para1+para2}<br>
+                    para2+para3 = ${para2+para3}`;
+                // CSS속성 변경
+                pTags[1].style.color = 'darkblue';
+            }
+            
+            // 매개변수가 1개일 경우 () 생략
+            var fn3 = para1 => {
+                // HTML속성 변경
+                pTags[2].innerHTML = `fn3의 결과 :<br>
+                    para1 = ${para1}<br>
+                    para1+para1 = ${para1+para1}`;
+                // 함수 강제 종료
+                return;
+                // CSS속성 변경
+                pTags[2].style.color = 'darkblue';
+            }
+            // 명령문이 1개일 경우 {} 생략
+            var fn4 = para1 => // HTML속성 변경
+                pTags[3].innerHTML = `fn4의 결과 :<br>
+                    para1 = ${para1}<br>`;
+            // 매개변수가 없으면 () 생략 불가
+            var fn5 = () => pTags[4].innerHTML = `fn5의 결과 :<br>
+                    10 = ${10}<br>`;
+            function fn6(a, b, c) {
+                pTags[5].innerHTML = `fn6의 결과 :<br>
+                a+b+c = ${a+b+c}<br>`;
+                return a - b - c;
+            }
+            // 초기식은 한 번만 읽는다.
+            // 조건식과 증감식은 조건식이 true이면 반복해서 읽는다.
+            // i를 변수로 선언후 1 할당
+            // i = 1
+            // 1 < 6 -> T
+            // pTag ~
+            // i 가 2
+            //  2 < 6 -> T
+            // pTag ~
+            // i++ -> i =3
+            // 3 < 6 -> T
+            // pTag -> i = 5
+            /* for (var i=0; i<6; i++) {
+                pTag[0].innerHTML += '<br>' + i;
+            } */
+        
+        // 익명함수
+        fn1(10, 20, 30);
+        // 화살표함수
+        fn2(10, 20, 30);
+        fn3(10);
+        fn4(10);
+        fn5();
+        // 선언적함수
+        var refVar = fn6(10, 20, 30);
+        pTags[6].innerText = `
+            fn6의 리턴값:
+            refVar = ${refVar}
+        `;
+        
+        // 매개변수가 1개일 경우 () 생략
+        // var fn = a => {document.write(a, 'br')}
+        // 명령문이 1개일 경우 {} 생략
+        // var fn = a => document.write(a, 'br')
+        // 매개변수가 없으면 () 생략 불가
+        // var fn = () => {document.write(a, 'br')}
+        // fn(para1, para2)
+    </script>
+</body>
+
+</html>

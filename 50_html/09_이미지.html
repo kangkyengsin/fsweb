@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <h1>이미지</h1>
+    <!-- 
+        자료수집
+        1. 텍스트 : 웹 정보를 메모장으로 자료 수집이 용이함(.txt), 피그마
+        2. 이미지 : 
+        - jpg(사진)
+        - gif(사진x, 256색, 투명, 애니메이션)
+        - png(사진, 투명)
+                https://www.pngwing.com/ko
+                https://unsplash.com/ko
+                크롬웹 : Fatkun Batch Download Image,
+                https://chrome.google.com/webstore/detail/fatkun-batch-download-ima/efcapamiilmdfbbilogcddbdckjhpajj?hl=ko
+        3. 경로(/저장위치) 
+            - 폴더/폴더/폴더/.../파일명
+        4. <img>
+        5. 인라인 요소
+            - 줄바꿈X, 왼쪽에서 오른쪽 배치(가로 배치)
+            - 너비는 콘테츠(이미지) 크기
+            - 높이는 콘테츠(이미지) 크기
+            - strong, b, em, i, mark, sub, sup, ins, del, small, img, br, a
+     -->
+    <!-- 
+        최살위 폴더(root{루트}-폴더) - 작업영역 폴더
+        사용 이미지
+        1. 이탈리아 풀리아주의 건축물인 트룰리: fsweb/50_html/assets/trulli.jpg
+        2. 클러치백: fsweb/50_html/assets/images/gallery2.jpg(갤러리)
+        3. 커피콩: fsweb/50_html/coffeebeans.png
+        4. 직장: fsweb/workplace.jpg
+        5. 배너: http://mega247.dothome.co.kr/assets/coca.png
+    -->
+
+    <!-- 웹접근성: 장애인이나 고령자분들이 웹 사이트에서 제공하는 정보를 비장애인과 동등하게 접근하고 이용 할 수 있도록 보장하는 것 -> 예)alt를 반드시 기록한다. -->
+    
+    <!-- 폴더와 파일명 구분자는 /(슬래시) 이다. -->
+    
+    <!-- 상대 경로 지정 방법 -->
+
+    <!-- 1. html문서보다 하위 폴더(assets)에 이미지가 있는 경우: 폴더1/폴더2/폴더3/.../파일명으로 쓴다. -->
+    <img src="assets/trulli.jpg" alt="이탈리아 폴리아주의 건축물인 트룰리">
+    <img src="assets/images/gallery2.jpg" alt="000 클러치백">
+    <!-- 2. html문서(09_이미지.html)와 이미지(coffeebeans.png)가 같은 폴더에 있는 경우: 파일 이름만 쓴다. -->
+    <img src="coffeebeans.png" alt="coffeebeans">
+    <!-- 3. html문서보다 상위 폴더(/fsweb)에 이미지가 있는 경우: ../../파일명으로 쓴다. -->
+    <img src="../Workplace.jpg" alt="노트북+스마트폰+커피">
+    
+    <hr>
+    
+    <!-- 
+        1. 루트(root:fsweb) 폴더로 부터 경로 설정 : 서버에서만 동작한. 
+        2. *.html 문서의 위치와 관계 없다.
+        3. 살무에서 주로 이 방법을 사용한다.
+    -->
+    <img src="/50_html/coffeebeans.png" alt="coffeebeans">
+    <img src="/50_html/assets/trulli.jpg" alt="trulli">
+    <img src="/50_html/assets/images/gallery2.jpg" alt="클러치백">
+    <img src="/Workplace.jpg" alt="Workplace">
+    
+    <hr>
+    <!-- 절대 경로 지정 방법 -->
+    <img src="http://mega247.dothome.co.kr/assets/coca.png" alt="코카콜라">
+
+
+</body>
+</html>

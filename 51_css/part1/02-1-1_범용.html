@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>같은 표현 방식
+        html {margin:0; padding:0;} = {마진, 페딩은 없다}
+        body {margin:0; padding:0;} = {마진O, 패딩X}
+        h1 {margin:0; padding:0;} = {마진O, 패딩X}
+        h2 {margin:0; padding:0;} = {마진O, 패딩X}
+        p {margin:0; padding:0;} = {마진O, 패딩X}
+        ul {margin:0; padding:0;} = {마진 글자 위아래 간격, 페딩은 li 왼쪽 간격}
+        li {margin:0; padding:0;} = {마진, 페딩은 없다}
+        html, body,h1,h2,p {margin:0; padding:0;}
+        /* 시스템 자원 낭비 현상이 생긴다. */
+        * {margin:0; padding:0;}
+    </style>
+</head>
+<body>
+    <h1>선택자</h1>
+    <h2>범용 (선택자) : *</h2>
+    <p>가급적 사용하지 않는다.</p>
+</body>
+</html>

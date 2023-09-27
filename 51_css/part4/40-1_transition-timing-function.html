@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        div {
+            width:100px;
+            height:50px;
+            margin:10px;
+            background: red;
+            transition: 1s;
+        }
+        div:hover {
+            width: 300px;
+        }
+
+        /* 
+            가속도(easing)
+
+            transition-timng-function: 시간 함수;
+                값: ease, ease-in, ease-out, ease-in-out, linear
+        */
+
+
+        /* 느린 시작과 끝, 시작 속도가 마지막 속도보다 약간 빠름 */
+        .trs1 {
+            transition-timing-function: ease;
+            transition-timing-function: cubic-bezier(0.25,0.1,0.25,0.1);
+        }
+        
+        /* 느린 시작 */
+        .trs2 {
+            transition-timing-function: ease-in;
+            transition-timing-function: cubic-bezier(0.42,0,1,1);
+        }
+        
+        /* 느린 끝 */
+        .trs3 {
+            transition-timing-function: ease-out;
+            transition-timing-function: cubic-bezier(0,0,0.58,1);
+        }
+        
+        /* 느린 시작과 끝, 시작 속도가 마지막 속도보다 약간 느림 */
+        .trs4 {
+            transition-timing-function: ease-in-out;
+            transition-timing-function: cubic-bezier(0.42,0,0.58,1);
+        }
+        
+        /* 등속 */
+        .trs5 {
+            transition-timing-function: linear;
+            transition-timing-function: cubic-bezier(0,0,1,1);
+        }
+        /* 음수는 0과 같다. 1보다 큰 값은 1과 같다  */
+        .trs6 {
+            transition-timing-function: cubic-bezier(.6,-9.36,57,2.02);
+        }
+        /* cubic-bezier(n,n,n,n) */
+        /* n은 0~1 사이 숫자 */
+        /* https://cubic-bezier.com/#.17,.67,.83,.67  */
+        
+    </style>
+</head>
+<body>
+    <h1>전환</h1>
+    <div class="trs1">ease</div>
+    <div class="trs2">ease-in</div>
+    <div class="trs3">ease-out</div>
+    <div class="trs4">ease-in-out</div>
+    <div class="trs5">linear</div>
+    <div class="trs6">cubic-bezier</div>
+</body>
+</html>

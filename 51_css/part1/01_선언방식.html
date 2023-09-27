@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <!--
+         CSS(cascaning style sheet) : 계단식, 폭포, 아래로 흐르는 우선순위(같은 속성이 사용되었을 경우)
+         1. inline style(인라인 CSS)
+         2. 내부 CSS, 외부 CSS
+     -->
+    <!-- 1. 외부(.HTML 말고 .CSS에 작성 후 링크) CSS: <link> 태그로 *.css 파일을 연결 -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* 
+        
+            CSS
+            1. 어디에 기록하나?
+            2. 선택자에는 어떤것이 있는가?
+            3. 속성에는 어떤것이 있는가?
+        
+        */
+        /* 
+            형식: 
+            선택자 {속성:값;속성:값;속성:값;속성:값;...}
+            선택자 {coler: 값;}
+            선택자 {backgroind-coler: 값;}
+            선택자 {border: 값 값 값;}
+        */
+        /* 
+        
+            속성
+            color : 글자색
+            background-color : 배경색
+            boder-color : 테두리색
+            boder-style : solid;
+
+            선택자(selector)
+            1. 기본 : 요소(tage, type), id, class
+            2. 의사(Pseudo, 슈도, 가상, 유사) 클라스 : Link, :visited, ※필수(:hover), :active
+            3. 복합 : 부모+자식+형제
+            4. 의사 요소 : ※필수(::befor, ::after)...
+            5. 속성
+
+            <div id="wrap"> = #div
+            <div class=":container"> = .div
+        
+        */
+        /* CSS는 태그를 디자인한다. */
+        /* 어떤 태그를 디자인 할 지 선택! */
+        /* 2. 내부(.HTML 파일 안에) CSS: <style> 태그 사이에 기록 */
+        /* 선택자 : 태그 이름 */
+        p {color: blue;}
+
+        /* <link>, <style> 태그는 <head> 사이에 쓴다. */
+    </style>
+</head>
+<body>
+    <h1>CSS 선언 방식</h1>
+    <!-- 
+        3. 인라인 CSS: HTML의 스타일 속성의 값으로 기록
+        HTML 태그에 직접 기록하기 태문에 선택자가 필요 없다.
+    -->
+    <p style="background-color: red;">인라인 CSS이란 HTML의 스타일 속성의 값으로 CSS의 속성과 값을 기록한다.</p>
+    <ul>
+        <li>Inline Style </li>
+        <li>Internal Style </li>
+        <li>External Style </li>
+    </ul>
+</body>
+</html>
