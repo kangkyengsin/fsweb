@@ -2,7 +2,7 @@ package exam;
 
 import java.util.Scanner;
 
-public class ex52 {
+public class Ex52 {
     public static void main(String[] args) {
         //영어에서 서수를 나타낼 때 다음과 같이 나타낸다.
         // 1st  2nd  3rd  4th  5th  6th  ... 
@@ -16,7 +16,7 @@ public class ex52 {
         // 1부터 99까지의 숫자가 입력되면 영어 서수 표현으로 출력하시오.
 
         Scanner in = new Scanner(System.in);
-        ex52 i = new ex52();
+        Ex52 i = new Ex52();
         int input;
         do {
             System.out.print("Input a number. (Quit: input 0):");
