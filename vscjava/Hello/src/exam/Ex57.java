@@ -17,7 +17,7 @@ public class Ex57 {
             case 1:
                 System.out.println(a);
                 break;
-                case 2:
+            case 2:
                 System.out.println(b);
                 break;
             case 3:
