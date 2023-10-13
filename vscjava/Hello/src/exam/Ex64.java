@@ -10,7 +10,7 @@ public class Ex64 {
         System.out.println("두번째값 : ");
         int num2 = scan.nextInt();
 
-        int num3 = num1 % num2;
+        double num3 = num1 % num2;
         System.out.println("나머지 : " + num3);
     }
 }

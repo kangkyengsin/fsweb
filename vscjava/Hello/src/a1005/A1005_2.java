@@ -6,7 +6,7 @@ public class A1005_2 {
         //intArray[0] = 10;
         //nullPointerException
 
-        String str = nul;
+        String str = null;
         // System.out.println("총 문자 수: " + str.length());
         // nullPointerException
     }

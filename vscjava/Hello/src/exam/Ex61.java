@@ -27,11 +27,11 @@ public class Ex61 {
 		else if(op.equals("-")) {
 			num3 = num1 - num2;
 		}
-		else if(op.equals("/")) {
-			num3 = num1 / num2;
+		else if(op.equals("*")) {
+			num3 = num1 * num2;
 		}
 		else{
-			num3 = num1 * num2;
+			num3 =(char) num1 / num2;
 		}
 		
 		System.out.println(str1 + op + str2 + "=" + num3);
