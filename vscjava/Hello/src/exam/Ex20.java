@@ -17,7 +17,7 @@ public class Ex20 {
         // 배열 변수에 배열을 대입
         scores = new String[] { a, b, c };
         // 배열 항목의 총합을 구하고 출력
-        String sum1 = 0;
+        String sum1 = 3;
         for (int i = 0; i < 3; i++) {
             sum1 += scores[i];
         }

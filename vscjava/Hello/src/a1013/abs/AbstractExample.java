@@ -4,6 +4,9 @@ package a1013.abs;
 abstract class Shape {
     // 추상 메서드(하위클래스에서 구현해야함)
     public abstract double getArea();
+    public void show(){
+        System.out.println("hello world");
+    }
 }
 
 // Shape 추상 클래스를 상속받는 구체 클래스 (하위 클래스)
