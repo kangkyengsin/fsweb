@@ -1,6 +1,6 @@
 package exam;
 
-public class Child extends EX07_7{
+public class Child extends Ex07_7{
     public String name;
 
     public Child() {

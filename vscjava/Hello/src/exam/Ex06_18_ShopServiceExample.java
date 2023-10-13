@@ -1,9 +1,9 @@
 package exam;
 
-public class ShopServiceExample {
+public class Ex06_18_ShopServiceExample {
     public static void main(String[] arges){
-        ShopService obj1 = ShopService.getInstance();
-        ShopService obj2 = ShopService.getInstance();
+        Ex06_18_ShopService obj1 = Ex06_18_ShopService.getInstance();
+        Ex06_18_ShopService obj2 = Ex06_18_ShopService.getInstance();
         
         
         if(obj1==obj2){
