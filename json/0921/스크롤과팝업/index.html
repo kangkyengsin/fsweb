@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css"/>
+    <link rel="stylesheet" href="./css/style.css" />
     <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
     <script src="./js/jquery-ui.js"></script>
     <script src="./js/jquery.cookie.js"></script>
     <script src="./js/jquery.mousewheel.min.js"></script>
-    <script src="./js/script.js"></script> 
+    <script src="./js/script.js"></script>
     <title>Document</title>
 </head>
+
 <body>
-    <h1>현재스크롤위치 : <span id="sTop">000</span></h1>
+    <h1 class="htop">현재스크롤위치 : <span id="sTop">000</span></h1>
     <nav>
         <ul>
             <li class="on"><a href="#">Mainmenu1</a></li>
@@ -35,13 +37,30 @@
             <p>area1</p>
         </div>
         <div id="area4" class="main">
-            <p>area1</p>
-        </div>
-        <div id="area5" class="main">
-            <p>area1</p>
-        </div>
-        <div id="area6" class="main">
-            <p>area1</p>
+            <div class="s4_cover">
+                <div class="s4_1">
+                    <h1>HTML</h1>
+                    <p class="p1">하면할수록 재미있다.</p>
+                </div>
+                <div class="s4_2">
+                    <h1>CSS</h1>
+                    <p class="p1">이제좀 알것 같다.</p>
+                </div>
+                <div class="s4_3">
+                    <h1>javascript</h1>
+                    <p class="p1">뭔말인지 통 몰겠다.</p>
+                </div>
+                <div class="s4_4">
+                    <h1>jQuery</h1>
+                    <p class="p1">뭔가 되네!신기하다.</p>
+                </div>
+            </div>
+            <div id="area5" class="main">
+                <p>area1</p>
+            </div>
+            <div id="area6" class="main">
+                <p>area1</p>
+            </div>
         </div>
     </section>
 
@@ -66,8 +85,8 @@
         </ul>
     </div>
     <div id="pdt_basic">
-        <img src="images/pdt_basic.png"  alt=""/>
-        
+        <img src="images/pdt_basic.png" alt="" />
+
     </div>
 
 
@@ -80,7 +99,7 @@
         </map>
     </div>
     <div id="notice_wrap">
-        <img src="images/popup1.jpg" alt="팝업공지"/>
+        <img src="images/popup1.jpg" alt="팝업공지" />
         <p class="closeWrap">
             <input type="checkbox" name='expiresChk' id='expiresChk'>
             <label for="expiresChk">3일동안 이 창 열지않기</label>
@@ -89,4 +108,5 @@
     </div>
 
 </body>
+
 </html>
