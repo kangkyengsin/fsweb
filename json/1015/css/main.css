@@ -1,0 +1,67 @@
+@charset "utf-8";
+@import url(./reset.css);
+@import url(./font.css);
+
+/* 모바일 */
+/* logo */
+.header {
+    display: flex;
+    border-bottom: 1px solid red;
+    height: 89px;
+}
+.mw1200 {
+    display: flex;
+    width: 95%;
+    height: 89px;
+}
+.mw1200 h1{
+    line-height: 89px;
+    margin: auto;
+}
+.mw1200 img {
+    width: 200px;
+}
+/* hamber */
+.m-on {
+    position: absolute;
+    top: 34px;
+    right: 10px;
+    width: 30px;
+    cursor: pointer;
+}
+.m-on span {
+    display: block;
+    width: 30px;
+    height: 2px;
+    border-radius: 2px;
+    background: #000;
+    margin-bottom: 8px;
+}
+/* nav */
+.mgnb img {
+    width: 100%;
+}
+.mgnb {
+    right: -500px;
+    position: absolute;
+    width: 250px;
+    height: 100%;
+}
+.mlogo {
+    padding: 27px 36px;
+}
+.mgnb ul li span {
+    display: block;
+    padding: 15px 0 25px 20px;
+    padding-bottom: 10px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.mgnb ul li ul li a {
+    display: block;
+    padding: 10px 0 10px 35px;
+    box-sizing: border-box;
+}
+
+/* 데스크탑 */
