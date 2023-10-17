@@ -111,3 +111,51 @@ section > div p{color: #fff; padding: 8px;}
 	margin-left: 20px; 
 	cursor:pointer;
 }
+
+#pdt_basic{
+    position: fixed;
+    width:326px;
+    height:450px;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+}
+
+#leftdiv{
+    width: 44px;
+    height: 207px;
+    position: fixed;
+    left: 20%;
+    top: 50%;
+    transform: translateY(-50%);
+    background: url(../images/remote_bg.png) no-repeat 0 0;
+}
+/*검정색배경*/
+#leftdiv ul li{
+    width: 44px;
+    height: 25px;
+    background: url(../images/remote_btnoff.png) no-repeat 8px 0;
+    margin-top: 15px;
+    cursor: pointer;
+}/*동그라미*/
+
+#leftdiv ul li.on{
+    background: url(../images/remote_btnon.png) no-repeat 8px 0;
+}/*작은새우*/
+
+#leftdiv ul li:nth-child(1){
+    margin-top: 5px;
+}
+
+#leftdiv .leftdiv_title{
+    width: 44px;
+    height: 43px;
+    background: url(../images/remote_mainoff.png) no-repeat 0 0;
+    margin-top: 0;
+    cursor: pointer;
+}/*홈(집) 색상흰색*/
+
+#leftdiv .leftdiv_title.on{
+    background: url(../images/remote_mainon.png) no-repeat 0 0;
+}/*홈(집) 색상오랜지*/
