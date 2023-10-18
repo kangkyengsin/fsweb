@@ -3,66 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>간단한 캐러셀 예제</title>
+    <title>Document</title>
     <style>
-        /* 슬라이드를 감싸는 컨테이너 스타일 */
-        .carousel-container {
-            width: 300px;
-            overflow: hidden;
-        }
         
-        /* 슬라이드 목록 스타일 */
-        .carousel-list {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-        }
-        
-        /* 각 슬라이드 스타일 */
-        .carousel-item {
-            min-width: 300px;
-            flex: 0 0 300px;
-            margin-right: 10px;
-        }
     </style>
 </head>
 <body>
-    <div class="carousel-container">
-        <div class="carousel-list">
-            <div class="carousel-item"><img src="slide1.jpg" alt="슬라이드 1"></div>
-            <div class="carousel-item"><img src="slide2.jpg" alt="슬라이드 2"></div>
-            <div class="carousel-item"><img src="slide3.jpg" alt="슬라이드 3"></div>
-            <!-- 필요한 만큼 슬라이드를 추가하세요 -->
-        </div>
+    <div>
+        <h1></h1>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
     </div>
-
-    <script>
-        const carouselList = document.querySelector('.carousel-list');
-        let currentIndex = 0;
-
-        function showSlide(index) {
-            const slideWidth = document.querySelector('.carousel-item').offsetWidth;
-            const offset = -index * slideWidth;
-            carouselList.style.transform = `translateX(${offset}px)`;
-        }
-
-        function nextSlide() {
-            currentIndex = (currentIndex + 1) % carouselList.children.length;
-            showSlide(currentIndex);
-        }
-
-        function prevSlide() {
-            currentIndex = (currentIndex - 1 + carouselList.children.length) % carouselList.children.length;
-            showSlide(currentIndex);
-        }
-
-        // 초기 슬라이드 표시
-        showSlide(currentIndex);
-
-        // 이전 슬라이드 버튼 클릭 시
-        document.querySelector('.prev-button').addEventListener('click', prevSlide);
-
-        // 다음 슬라이드 버튼 클릭 시
-        document.querySelector('.next-button').addEventListener('click', nextSlide);
-    </script>
+    <div></div>
+    <div></div>
+    <div></div>
 </body>
 </html>
