@@ -2,10 +2,10 @@ package a1026.example;
 
 public class MemberDTO {
     private int id;
-    private String name;
-    private int age;
-    private String address;
-
+	private String name;
+	private int age;
+	private String address;
+    
     public int getId() {
         return id;
     }
@@ -39,9 +39,9 @@ public class MemberDTO {
     }
 
     // 기본생성자
-    public MemberDTO() {
-        
-    }
+	public MemberDTO() {
+		
+	}
 
     public MemberDTO(int id, String name, int age, String address) {
         super();
@@ -51,8 +51,9 @@ public class MemberDTO {
         this.address = address;
     }
 
-    // tostring
-    public String toString() {
-        return "" + id + "\t" + name + "\t" + age + "\t" + address;
-    }
+    // toString
+	public String toString () {
+		return " "+ id + "\t" + name + "\t" + age+"\t"+ address;
+	}
+
 }
