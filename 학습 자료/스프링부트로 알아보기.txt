@@ -1,0 +1,13 @@
+1. 스프링부트 알아보기 스프링부트 알아보는 책입니다.
+2. 자바 자바프로그램을 알아보는 책입니다.
+
+타임리프 is문으로 작성법
+ <tr th:each="article : ${articleList}">
+        <th th:text="${article.id}"></th>
+        <td th:text="${article.title}"></td>
+        <td th:text="${article.content}"></td>
+    </tr>
+
+종합하면, 로깅 프레임워크는 애플리케이션의 로그 관리,
+
+Go to Article List
