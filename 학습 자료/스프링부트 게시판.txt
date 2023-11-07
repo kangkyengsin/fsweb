@@ -1,0 +1,7 @@
+@RestController 생성
+// 댓글 목록 조회
+comments 메서드 생성하는법
+createCommentDto 메서드 생성해서 dto로 
+// 댓글 생성
+// 댓글 수정
+// 댓글 삭제
