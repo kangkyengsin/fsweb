@@ -1,0 +1,21 @@
+
+// 버전 확인
+npm --version
+
+// 폴더 이동
+cd src
+cd main
+
+// 폴더 생성
+npx create-react-app frontend
+
+// 폴더 이동
+cd frontend
+
+// 설치
+npm install axios --save
+npm install react-router-dom 
+npm install http-proxy-middleware --save
+
+// 리액트 페이지
+npm start
