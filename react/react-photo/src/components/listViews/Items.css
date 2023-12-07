@@ -1,0 +1,10 @@
+.items {
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 18px 0px;
+    padding: 3vw;
+    margin: 5rem auto;
+    border-radius: 2rem;
+}
+
+img {
+    width: 25rem;
+}

@@ -1,0 +1,11 @@
+.list_body {
+    padding: 2vw;
+    display: flex;
+    gap: 2rem;
+}
+
+.list_item {
+    padding: 2vw;
+    border-radius: 1vw;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.2);
+}
